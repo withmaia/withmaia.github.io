@@ -62,7 +62,7 @@ h1 .words {
   margin-right: 0.25em;
   position: relative;
   text-align: right;
-  -webkit-transition: bottom 0.5s;
+  -webkit-transition: bottom 0.3s cubic-bezier(0.755, 1.380, 0.690, 0.955);
   right: 0;
   position: relative;
 }
