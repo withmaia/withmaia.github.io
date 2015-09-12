@@ -1,0 +1,46 @@
+$colors
+    purple: #515CA0
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font: 14px/40px dinprolight, 'Helvetica Neue', Helvetica, sans-serif
+
+a
+    cursor: pointer
+    text-decoration: none
+
+#app
+    background: $colors.purple
+    padding: 60px
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+img
+    display: block
+
+h2
+    text-align: center
+    font-size: 64px
+    max-width: 750px
+    line-height: 1.2em
+    font-weight: 300
+    margin-top: 60px
+    color: #fff
+    display: flex
+    align-items: center
+
+@media(max-width: 320px)
+    h1
+        font-size: 25px
+
