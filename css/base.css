@@ -1,5 +1,9 @@
 
 
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -13,20 +17,6 @@ body {
 a {
   cursor: pointer;
   text-decoration: none;
-}
-
-#app {
-  background: #515CA0;
-  padding: 60px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 img {
@@ -43,6 +33,75 @@ h2 {
   color: #fff;
   display: flex;
   align-items: center;
+  margin-bottom: 90px;
+}
+
+h3 {
+  font: 500 25px/32px dinprolight, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #515CA0;
+  margin-bottom: 20px;
+}
+
+p {
+  font: 16px/36px dinprolight, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+p + h3 {
+  margin-top: 60px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section.purple {
+  background: #515CA0;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section.purple form input {
+  display: block;
+  background: #3B4584;
+  font: 500 25px/32px dinprolight, 'Helvetica Neue', Helvetica, sans-serif;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  width: 600px;
+}
+
+.section.purple form ::-webkit-input-placeholder {
+  color: #515CA0;
+}
+
+.section.purple form i.fa {
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #515CA0;
+}
+
+.section.purple form input:focus + i.fa {
+  color: white;
+}
+
+.section.purple form {
+  position: relative;
+}
+
+.section.white {
+  background: white;
+  width: 100%;
+  padding: 90px;
 }
 
 @media (max-width: 320px) {
