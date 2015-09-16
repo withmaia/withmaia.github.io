@@ -4,12 +4,12 @@ success_message = 'Thanks! We will send updates when new devices and tutorials a
 
 showSuccess = (e) ->
     $form = $(e.currentTarget)
-    $form.slideUp()
     p = $("<p class='note'>#{ success_message }</p>")
     $form.after p
+    $form.slideUp()
 
 form_error = (e) =>
-    $('input').addClass 'has-error'
+    $('input').addClass('has-error').focus()
 
 $ ->
 

@@ -3,6 +3,7 @@ html(lang='en')
     head
         title with maia
         link(rel='stylesheet', href='/css/din.css')
+        link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', rel='stylesheet')
         link(rel='stylesheet', href='/css/base.css')
         link(rel='icon', href='/img/favicon.png')
         meta(name="apple-mobile-web-app-capable", content="yes")
@@ -15,7 +16,9 @@ html(lang='en')
         #app
             img(src="/img/maia-logo-full.png")
             h2 Open source hardware and software for building a connected home.
-            p down chevron
+            .chevrons
+                i.fa.fa-chevron-down.scroll-down.inset
+                i.fa.fa-chevron-down.scroll-down
 
             .white-section
                 .readable
@@ -33,8 +36,9 @@ html(lang='en')
                     h3 Enter your email to receive updates about new Maia devices and integrations.
 
                     form.email-form
-                        input(name='email' placeholder='Please enter your email')
-                        button Submit
+                        .group
+                            input(name='email' placeholder='Please enter your email')
+                            button Submit
 
                     h3 What can I make with Maia?
                     p A webhook you can SMS to make tea. A light sensor to build a virtual sunset that mirrors the sun with Hue. A door sensor that lights up your living room when you get home... And anything else you can imagine! Please contact us at ideas@withmaia.io if you have new ideas for the Maia community to build.
