@@ -1,35 +1,51 @@
-head
-    title Maia | Open source hardware and software for building a connected home
-    link(rel='stylesheet', href='/css/din.css')
-    link(rel='stylesheet', href='/css/base.css')
-    link(rel='icon', href='/img/favicon.png')
-    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css')
-    meta(name="apple-mobile-web-app-capable", content="yes")
-    meta(name="mobile-web-app-capable", content="yes")
-    meta(name="HandheldFriendly", content="True")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
-    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+doctype html5
+html(lang='en')
 
-body
-    .section.purple
-        img(src="/img/maia-logo-full.png")
-        h2 Open source hardware and software for building a connected home.
+    head
+        title Maia | Open source hardware and software for building a connected home
+        link(rel='stylesheet', href='/css/din.css')
+        link(rel='stylesheet', href='/css/base.css')
+        link(rel='icon', href='/img/favicon.png')
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css')
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="mobile-web-app-capable", content="yes")
+        meta(name="HandheldFriendly", content="True")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
 
-        form
-            input(name='email', placeholder='Join our email list for updates')
-            i.fa.fa-long-arrow-right
+    body
+        .section.purple
+            img(src="/img/maia-logo-full.png")
+            h2 Open source hardware and software for building a connected home.
 
-    .section.white
-        .container
+            form.email-form
+                input(name='email', placeholder='Join our email list for updates')
+                i.fa.fa-long-arrow-right
+                button
 
-            h3 What is Maia?
-            p Maia is an open source hardware and software platform for building and connecting your own Home Automation system. It lets you build devices from scratch with instructions and kits from the community and integrate them seamlessly with popular Home Automation products you already own.
+            .chevrons
+                i.fa.fa-chevron-down.scroll-down
+                i.fa.fa-chevron-down.scroll-down.inset
 
-            h3 Why is Maia better than existing products?
-            p SmartThings' available modules are conveniently packaged and do what they say on the box. This is enough for some people, but not for makers. Maia's hardware and software is all open source, allowing you to add your own inputs, outputs, and logic. You can sense and control anything and it will work perfectly with the rest of the Maia network &mdash; which means it will also work with SmartThings, Hue, Wemo, and other popular brands of Home Automation devices.
+        .section.white
+            .container
 
-            h3 Why is Maia better than doing it myself?
-            p We built an efficient and reliable networking protocol into Maia components so you don't have to. Then we integrated popular existing HA/IoT frameworks so you don't have to. Finally, we created a simple web interface where you can hook everything up and customize your integrations. Everything is open source so you can build what you want and integrate seamlessly with everything else the Maia community creates and shares.
+                h3 What is Maia?
+                p Maia is an open source hardware and software platform for building and connecting your own Home Automation system. It lets you build devices from scratch with tutorials and kits from the community and integrate them seamlessly with popular Home Automation products you already own.
 
-            h3 What can I make with Maia?
-            p A webhook you can SMS to make tea. A light sensor to build a virtual sunset that mirrors the sun with Hue. A door sensor that lights up your living room when you get home... And anything else you can imagine!
+                h3 Why is Maia better than existing products?
+                p SmartThings' available modules are conveniently packaged and do what they say on the box. This is enough for some people, but not for makers. Maia's hardware and software is all open source, allowing you to add your own inputs, outputs, and logic. You can sense and control anything and it will work perfectly with the rest of the Maia network &mdash; which means it will also work with SmartThings, Hue, Wemo, and other popular brands of Home Automation devices.
+
+                h3 Why is Maia better than doing it myself?
+                p We built an efficient and reliable networking protocol into Maia components so you don't have to. Then we integrated popular existing HA/IoT frameworks so you don't have to. Finally, we created a simple web interface where you can hook everything up and customize your integrations. Everything is open source so you can build what you want and integrate seamlessly with everything else the Maia community creates and shares.
+
+                h3 What can I make with Maia?
+                p A webhook you can SMS to make tea. A light sensor to build a virtual sunset that mirrors the sun with Hue. A door sensor that lights up your living room when you get home... And anything else you can imagine!
+
+                h3 Enter your email to receive updates about new Maia devices and integrations.
+                form.email-form.white
+                    .group
+                        input(name='email' placeholder='Join our email list for updates')
+                        button Submit
+
+        script(src='/js/form.js')
