@@ -26,22 +26,6 @@ a
     cursor: pointer
     text-decoration: none
 
-.chevrons
-    position: relative
-    .scroll-down
-        color: #5E6AA9
-        color: #3C4782
-        margin-top: 30px
-        margin-bottom: 0px
-        font-size: 64px
-        &.inset
-            display: none
-            position: absolute
-            top: -1px
-            left: 0px
-            color: #5E6AA9
-            color: #3C4782
-
 img
     display: block
 
@@ -73,6 +57,8 @@ p
 p + h3
     margin-top: 60px
 
+// Container, sections
+
 .container
     max-width: 600px
     margin: 0 auto
@@ -85,114 +71,85 @@ p + h3
     justify-content: center
     align-items: center
 
-    form
-        position: relative
-
-        input
-            display: block
-            background: $colors.purple_shade
-            font: $fonts.lead
-            border: none
-            color: white
-            outline: none
-            padding: 15px 20px
-            width: 600px
-            border: 1px solid transparent
-            &.has-error
-                border-color: rgba(162, 78, 140, 0.82)
-        button
-            cursor: pointer
-            position: absolute
-            right: 0px
-            bottom: 0px
-            top: 0px
-            width: 50px
-            background: transparent
-            border: none
-
-            &:active, &:focus
-                outline: 0
-
-        .note
-            color: white
-
-        ::-webkit-input-placeholder
-            color: $colors.purple
-
-        i.fa
-            cursor: pointer
-            font-size: 25px
-            position: absolute
-            right: 20px
-            top: 20px
-            color: $colors.purple
-
-        input:focus + i.fa
-            color: white
-
-
 .section.white
     background: white
     width: 100%
     padding: 90px
 
-.email-form.white
-    ::-webkit-input-placeholder
-        color: #888
-        font-weight: bold
-        font-size: 12px
+// Email form
 
-    .group
-        max-width: 600px
+.email-form
+    position: relative
 
     input
-        position: relative
-        margin: 20px 0px 60px
-        padding: 13px
-        width: 70%
-        border-color: #888
-        border-width: 1px
-
-        border-radius: 2px 0px 0px 2px
-
-        + .error
-            top: 15px
-            display: none
-            color: rgba(166, 81, 193, 0.53)
-
+        display: block
+        background: $colors.purple_shade
+        font: $fonts.lead
+        border: none
+        color: white
+        outline: none
+        padding: 15px 20px
+        width: 600px
+        border: 1px solid transparent
         &.has-error
-            border-color: rgba(166, 81, 193, 0.53)
-
-            + .error
-                display: block
-
-            ::-webkit-input-placeholder
-                color: rgba(166, 81, 193, 0.53)
+            border-color: rgba(162, 78, 140, 0.82)
+    button
+        cursor: pointer
+        position: absolute
+        right: 0px
+        bottom: 0px
+        top: 0px
+        width: 50px
+        background: transparent
+        border: none
 
         &:active, &:focus
             outline: 0
-    button
-        border-radius: 0px
-        padding: 10px 30px
-        font-size: 18px
-        font-style: 600
-        background: $colors.purple
-        color: white
-        border: none
-        position: relative
-        top: 2px
-        cursor: pointer
-        border-radius: 0px 2px 2px 0px
 
-        &:active
-            background: #364182
+    .note
+        color: white
+
+    ::-webkit-input-placeholder
+        color: $colors.purple
+
+    .arrow
+        cursor: pointer
+        font-size: 25px
+        position: absolute
+        right: 20px
+        top: 20px
+        color: $colors.purple
+
+    input:focus + .arrow
+        color: white
+
+.email-form.white
+    ::-webkit-input-placeholder
+        color: #ccc
+
+    input
+        background: #f8f8f8
+        color: #333
+
+        + .error
+            color: rgba(166, 81, 193, 0.53)
+
+        &.has-error
+            border: 1px solid #f00
+
+        &:active, &:focus
             outline: 0
-        &:focus
-            outline: 0
+
+    .arrow
+        color: #ccc
+
+    input:focus + .arrow
+        color: #333
 
 .note
     margin: 60px
 
+// Mobile sizing
 
 @media(max-width: 900px)
     

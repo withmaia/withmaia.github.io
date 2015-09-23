@@ -20,12 +20,8 @@ html(lang='en')
 
             form.email-form
                 input(name='email', placeholder='Join our email list for updates')
-                i.fa.fa-long-arrow-right
+                i.fa.fa-long-arrow-right.arrow
                 button
-
-            .chevrons
-                i.fa.fa-chevron-down.scroll-down
-                i.fa.fa-chevron-down.scroll-down.inset
 
         .section.white
             .container
@@ -43,9 +39,10 @@ html(lang='en')
                 p A webhook you can SMS to make tea. A light sensor to build a virtual sunset that mirrors the sun with Hue. A door sensor that lights up your living room when you get home... And anything else you can imagine!
 
                 h3 Enter your email to receive updates about new Maia devices and integrations.
+
                 form.email-form.white
-                    .group
-                        input(name='email' placeholder='Join our email list for updates')
-                        button Submit
+                    input(name='email', placeholder='Join our email list for updates')
+                    i.fa.fa-long-arrow-right.arrow
+                    button
 
         script(src='/js/form.js')
