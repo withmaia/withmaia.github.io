@@ -4,6 +4,8 @@
 
 
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -29,11 +31,13 @@ h2 {
   max-width: 750px;
   line-height: 1.2em;
   font-weight: 300;
-  margin-top: 60px;
+  margin-top: 50px;
   color: #fff;
   display: flex;
   align-items: center;
-  margin-bottom: 90px;
+  padding: 0px 50px;
+  margin-bottom: 50px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 h3 {
@@ -68,21 +72,58 @@ p + h3 {
   align-items: center;
 }
 
-.section.purple form input {
+.section.white {
+  background: white;
+  width: 100%;
+  padding: 90px;
+}
+
+.email-form {
+  position: relative;
+}
+
+.email-form input.has-error {
+  border-color: rgba(162, 78, 140, 0.82);
+}
+
+.email-form input {
   display: block;
   background: #3B4584;
   font: 500 25px/32px dinprolight, 'Helvetica Neue', Helvetica, sans-serif;
   border: none;
+  color: white;
   outline: none;
   padding: 15px 20px;
   width: 600px;
+  border: 1px solid transparent;
 }
 
-.section.purple form ::-webkit-input-placeholder {
+.email-form button:active,
+.email-form button:focus {
+  outline: 0;
+}
+
+.email-form button {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  width: 50px;
+  background: transparent;
+  border: none;
+}
+
+.email-form .note {
+  color: white;
+}
+
+.email-form ::-webkit-input-placeholder {
   color: #515CA0;
 }
 
-.section.purple form i.fa {
+.email-form .arrow {
+  cursor: pointer;
   font-size: 25px;
   position: absolute;
   right: 20px;
@@ -90,18 +131,102 @@ p + h3 {
   color: #515CA0;
 }
 
-.section.purple form input:focus + i.fa {
+.email-form input:focus + .arrow {
   color: white;
 }
 
-.section.purple form {
-  position: relative;
+.email-form.white ::-webkit-input-placeholder {
+  color: #ccc;
 }
 
-.section.white {
-  background: white;
-  width: 100%;
-  padding: 90px;
+.email-form.white input + .error {
+  color: rgba(166, 81, 193, 0.53);
+}
+
+.email-form.white input.has-error {
+  border: 1px solid #f00;
+}
+
+.email-form.white input:active,
+.email-form.white input:focus {
+  outline: 0;
+}
+
+.email-form.white input {
+  background: #f8f8f8;
+  color: #333;
+}
+
+.email-form.white .arrow {
+  color: #ccc;
+}
+
+.email-form.white input:focus + .arrow {
+  color: #333;
+}
+
+.note {
+  margin: 60px;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  h2 {
+    font-size: 49px;
+  }
+
+  form .group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  h2 {
+    font-size: 36px;
+  }
+
+  .section.purple form input {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .section.purple form {
+    width: 100%;
+  }
+
+  .white.section input {
+    width: 70%;
+  }
+
+  .white.section button {
+    width: 30%;
+  }
+
+  .white.section {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .section.purple input {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section.purple form input {
+    font-size: 16px;
+  }
+
+  .email-form.white button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 320px) {
