@@ -15,15 +15,4 @@ serveStatic = (req, res) ->
 app.get '/img/*', serveStatic
 app.get '/font/*', serveStatic
 
-all_names = "joe james jack jillian jeffrey george fred frank frida".split(' ')
-app.get '/search', (req, res) ->
-    {q} = req.query
-    respond = ->
-        res.json all_names.filter (n) -> n.match q
-    setTimeout respond, 500
-
-app.post '/contact', (req, res) ->
-    console.log 'Just got contacted by', req.body.email
-    res.json success: true
-
 app.start()
