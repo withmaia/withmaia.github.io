@@ -27,5 +27,6 @@ $ ->
             form_error($form)
 
         else
-            $.post '/contact', {email: val}, (data) ->
+            $.post 'http://api.withmaia.io/subscribe.json', {email: val}, (data) ->
                 showSuccess($form)
+
